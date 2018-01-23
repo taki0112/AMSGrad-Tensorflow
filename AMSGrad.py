@@ -9,7 +9,6 @@ from tensorflow.python.ops import resource_variable_ops
 
 
 class AMSGrad(optimizer.Optimizer):
-    # https://fdlm.github.io/post/amsgrad/
     def __init__(self, learning_rate=0.01, beta1=0.9, beta2=0.99, epsilon=1e-8, use_locking=False, name="AMSGrad"):
         super(AMSGrad, self).__init__(use_locking, name)
         self._lr = learning_rate
