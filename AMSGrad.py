@@ -25,7 +25,6 @@ class AMSGrad(optimizer.Optimizer):
         self._beta2_power = None
 
     def _create_slots(self, var_list):
-
         first_var = min(var_list, key=lambda x: x.name)
 
         create_new = self._beta1_power is None
@@ -34,12 +33,8 @@ class AMSGrad(optimizer.Optimizer):
 
         if create_new:
             with ops.colocate_with(first_var):
-                self._beta1_power = variable_scope.variable(self._beta1,
-                                                            name="beta1_power",
-                                                            trainable=False)
-                self._beta2_power = variable_scope.variable(self._beta2,
-                                                            name="beta2_power",
-                                                            trainable=False)
+                self._beta1_power = variable_scope.variable(self._beta1, name="beta1_power", trainable=False)
+                self._beta2_power = variable_scope.variable(self._beta2, name="beta2_power", trainable=False)
         # Create slots for the first and second moments.
         for v in var_list :
             self._zeros_slot(v, "m", self._name)
