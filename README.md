@@ -35,7 +35,7 @@ Simple Tensorflow implementation of [AMSGrad](https://openreview.net/pdf?id=ryQu
 </div>
 
 ## Reference
-* [Keras](https://github.com/keras-team/keras/blob/master/keras/optimizers.py)
+* [Keras-AMSGrad](https://github.com/keras-team/keras/blob/master/keras/optimizers.py)
 
 ## Author
 Junho Kim
