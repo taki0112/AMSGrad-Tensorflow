@@ -11,7 +11,7 @@ Simple Tensorflow implementation of [AMSGrad](https://openreview.net/pdf?id=ryQu
 ```python
   from AMSGrad import AMSGrad
   
-  loss = AMSGrad.minimize(learning_rate=0.01, beta1=0.9, beta2=0.99, epsilon=1e-8)
+  train_op = AMSGrad(learning_rate=0.01, beta1=0.9, beta2=0.99, epsilon=1e-8).minimize(loss)
 ```
 
 ## Author
