@@ -17,8 +17,8 @@ Simple Tensorflow implementation of [AMSGrad](https://openreview.net/pdf?id=ryQu
 
 ## Network Architecture
 ```python
-  x = tf.layers.dense(inputs=images, units=100)
-  x = tf.nn.relu(x)
+  x = fully_connected(inputs=images, units=100)
+  x = relu(x)
   logits = tf.layers.dense(inputs=x, units=10)
 ```
 
