@@ -21,7 +21,7 @@ Simple Tensorflow implementation of [AMSGrad](https://openreview.net/pdf?id=ryQu
   x = relu(x)
   logits = tf.layers.dense(inputs=x, units=10)
 ```
-## Result (iteration = 3M)
+## Mnist Result (iteration = 3M)
 ### lr=0.1, beta1=0.9, beta2=various
 <div align="center">
    <img src="/assests/lr_01_loss.png" width="420">
