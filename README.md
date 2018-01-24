@@ -19,7 +19,7 @@ Simple Tensorflow implementation of [AMSGrad](https://openreview.net/pdf?id=ryQu
 ```python
   x = fully_connected(inputs=images, units=100)
   x = relu(x)
-  logits = tf.layers.dense(inputs=x, units=10)
+  logits = fully_connected(inputs=x, units=10)
 ```
 ## Mnist Result (iteration = 3M)
 ### lr=0.1, beta1=0.9, beta2=various
