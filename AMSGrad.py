@@ -1,11 +1,13 @@
+"""AMSGrad for TensorFlow."""
+
 from tensorflow.python.eager import context
 from tensorflow.python.framework import ops
 from tensorflow.python.ops import control_flow_ops
 from tensorflow.python.ops import math_ops
+from tensorflow.python.ops import resource_variable_ops
+from tensorflow.python.ops import state_ops
 from tensorflow.python.ops import variable_scope
 from tensorflow.python.training import optimizer
-from tensorflow.python.ops import state_ops
-from tensorflow.python.ops import resource_variable_ops
 
 
 class AMSGrad(optimizer.Optimizer):
@@ -77,12 +79,12 @@ class AMSGrad(optimizer.Optimizer):
 
     def _resource_apply_dense(self, grad, var):
         var = var.handle
-        beta1_power = math_ops.cast(self._beta1_power, var.dtype.base_dtype)
-        beta2_power = math_ops.cast(self._beta2_power, var.dtype.base_dtype)
-        lr_t = math_ops.cast(self._lr_t, var.dtype.base_dtype)
-        beta1_t = math_ops.cast(self._beta1_t, var.dtype.base_dtype)
-        beta2_t = math_ops.cast(self._beta2_t, var.dtype.base_dtype)
-        epsilon_t = math_ops.cast(self._epsilon_t, var.dtype.base_dtype)
+        beta1_power = math_ops.cast(self._beta1_power, grad.dtype.base_dtype)
+        beta2_power = math_ops.cast(self._beta2_power, grad.dtype.base_dtype)
+        lr_t = math_ops.cast(self._lr_t, grad.dtype.base_dtype)
+        beta1_t = math_ops.cast(self._beta1_t, grad.dtype.base_dtype)
+        beta2_t = math_ops.cast(self._beta2_t, grad.dtype.base_dtype)
+        epsilon_t = math_ops.cast(self._epsilon_t, grad.dtype.base_dtype)
 
         lr = (lr_t * math_ops.sqrt(1 - beta2_power) / (1 - beta1_power))
 
