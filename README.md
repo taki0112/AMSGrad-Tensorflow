@@ -21,17 +21,11 @@ Simple Tensorflow implementation of [AMSGrad](https://openreview.net/pdf?id=ryQu
   x = relu(x)
   logits = tf.layers.dense(inputs=x, units=10)
 ```
-## Result
+## Result (iteration = 3M)
 ### lr=0.1, beta1=0.9, beta2=various
-<div align="center">
-   <img src="/assests/lr_01_loss.png" width="420">
-  <img src="/assests/lr_01_acc.png"  width="420">
-</div>
+
 
 ### lr=0.01, beta1=0.9, beta2=various
-<div align="center">
-   <img src="/assests/lr_0_01_loss.png" width="420">
-  <img src="/assests/lr_0_01_acc.png"  width="420">
-</div>
+
 ## Author
 Junho Kim
