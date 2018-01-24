@@ -145,8 +145,7 @@ class AMSGrad(optimizer.Optimizer):
 
     def _resource_scatter_add(self, x, i, v):
         with ops.control_dependencies(
-                [resource_variable_ops.resource_scatter_add(
-                    x.handle, i, v)]):
+                [resource_variable_ops.resource_scatter_add(x.handle, i, v)]):
             return x.value()
 
     def _resource_apply_sparse(self, grad, var, indices):
