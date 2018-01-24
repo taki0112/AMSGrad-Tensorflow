@@ -7,6 +7,7 @@ Simple Tensorflow implementation of [AMSGrad](https://openreview.net/pdf?id=ryQu
 * `beta1` = 0.9
 * `beta2` = 0.99
 
+* Depending on which network you are using, performance may be good at `beta2 = 0.999 (default)`
 ## Usage
 ```python
   from AMSGrad import AMSGrad
