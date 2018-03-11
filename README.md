@@ -6,7 +6,7 @@ Simple Tensorflow implementation of [AMSGrad](https://openreview.net/pdf?id=ryQu
 * `learning_rate` = 0.01
 * `beta1` = 0.9
 * `beta2` = 0.99
-* Depending on which network you are using, performance may be good at `beta2 = 0.999 (default)`
+* Depending on which network you are using, performance may be good at `beta2 = 0.99 (default)`
 
 ## Usage
 ```python
