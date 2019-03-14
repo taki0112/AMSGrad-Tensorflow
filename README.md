@@ -21,7 +21,7 @@ Simple Tensorflow implementation of [On the Convergence of Adam and Beyond](http
   x = relu(x)
   logits = fully_connected(inputs=x, units=10)
 ```
-## Mnist Result (iteration = 3M)
+## Mnist Result (iteration = 30K)
 ### lr=0.1, beta1=0.9, beta2=various
 <div align="center">
    <img src="/assests/lr_01_loss.png" width="420">
